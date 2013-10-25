@@ -9,5 +9,6 @@ end
 
 get '/:state' do |state|
 	@@status = state if ['up', 'down'].include? state
+	redirect '/'
 end
 
