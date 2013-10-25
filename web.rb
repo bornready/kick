@@ -8,7 +8,7 @@ get '/' do
 end
 
 get '/:state' do |state|
-	@@status = state if ['up', 'down'].include? state
+	@@status = state if ['up', 'down', 'idle'].include? state
 	redirect '/'
 end
 
