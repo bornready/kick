@@ -8,6 +8,6 @@ get '/' do
 end
 
 get '/:state' do |state|
-	@@status = state
+	@@status = state if ['up', 'down'].include? state
 end
 
