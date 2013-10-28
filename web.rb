@@ -13,7 +13,13 @@ get '/peek' do
  "Peek: " + @@status
 end	
 
-get '/:state' do |state|
+get '/set' do
+	erb :index
+end	
+
+
+post '/:state' do |state|
 	@@status = state if ['up', 'down', 'idle'].include? state
+	redirect "/set?s=#{state}"
 end
 

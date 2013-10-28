@@ -1,0 +1,20 @@
+<style type="text/css">
+
+form, input {
+	display: inline;
+	font-size: 25px; 
+}
+
+</style>
+
+<% if params[:s] %>
+	<p>OK. Going <%=params[:s] %> :)</p>
+<% end %>
+
+<form action=up method=POST>
+	<input type=submit value=UP>
+</form>	
+
+<form action=down method=POST>
+	<input type=submit value=DOWN>
+</form>	
